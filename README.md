@@ -2,6 +2,8 @@
 
 An AI-powered podcast generator built with React, TypeScript, and the ElevenLabs API. Enter a topic, pick two voices, and get a fully voiced two-host podcast episode in seconds.
 
+<img width="1090" height="518" alt="image" src="https://github.com/user-attachments/assets/7e9450b2-b684-4198-935e-4fa888359a08" />
+
 ## What it does
 
 1. **Write** — You enter a topic (e.g. *"The future of voice AI"*). Groq's Llama 3 model generates a natural, 6–8 turn conversation between two podcast hosts.
