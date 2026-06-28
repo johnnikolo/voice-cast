@@ -23,7 +23,7 @@ export async function synthesize(voiceId: string, text: string): Promise<ArrayBu
     body: JSON.stringify({
       text,
       model_id: 'eleven_multilingual_v2',
-      voice_settings: { stability: 0.5, similarity_boost: 0.75 },
+      voice_settings: { stability: 0.85, similarity_boost: 0.85, use_speaker_boost: true },
     }),
   });
   if (!res.ok) throw new Error(`ElevenLabs TTS error: ${res.status}`);
