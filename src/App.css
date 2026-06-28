@@ -1,0 +1,281 @@
+/* ── Layout ── */
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem 5rem;
+  background: #0d0d0f;
+  color: #e8e8f0;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0 0 0.25rem;
+}
+
+.logo-icon {
+  margin-right: 0.4rem;
+}
+
+.tagline {
+  color: #888;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #16161a;
+  border: 1px solid #2a2a30;
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.topic-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background: #0d0d0f;
+  border: 1px solid #2a2a30;
+  border-radius: 10px;
+  color: #e8e8f0;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.topic-input:focus {
+  border-color: #7c6af7;
+}
+
+.topic-input:disabled {
+  opacity: 0.5;
+}
+
+/* ── Voice Pickers ── */
+.voices-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.voice-picker {
+  min-width: 0;
+}
+
+.voice-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.voice-picker-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.voice-select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.6rem 0.75rem;
+  background: #0d0d0f;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  color: #e8e8f0;
+  font-size: 0.875rem;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.voice-select:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.preview-btn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color 0.15s;
+}
+
+.preview-btn:hover:not(:disabled) {
+  color: #e8e8f0;
+}
+
+/* ── Buttons ── */
+.action-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.btn-primary {
+  background: #7c6af7;
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.btn-secondary {
+  background: #2a2a30;
+  color: #e8e8f0;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #333340;
+}
+
+.btn-ghost {
+  background: none;
+  color: #888;
+  border: 1px solid #2a2a30;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  color: #e8e8f0;
+  border-color: #444;
+}
+
+/* ── Status ── */
+.status-text {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.progress-bar {
+  height: 4px;
+  background: #2a2a30;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7c6af7, #2ecc9a);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* ── Error ── */
+.error-banner {
+  background: #2d1515;
+  border: 1px solid #5a1a1a;
+  color: #ff7070;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* ── Script ── */
+.script {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.script-line {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-width: 85%;
+  opacity: 0.45;
+  transition: opacity 0.3s;
+}
+
+.script-line.align-left {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.script-line.align-right {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.script-line.active {
+  opacity: 1;
+}
+
+.speaker-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  color: #0d0d0f;
+}
+
+.line-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  background: #16161a;
+  border: 1px solid #2a2a30;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+}
+
+.script-line.active .line-text {
+  border-color: #3a3a44;
+}
